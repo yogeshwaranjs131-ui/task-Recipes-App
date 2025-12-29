@@ -1,0 +1,232 @@
+{
+  "info": {
+    "_postman_id": "recipes-app-collection",
+    "name": "Recipes App API",
+    "description": "Complete CRUD API for managing recipes with comprehensive documentation and sample requests.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Recipe",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Pasta Carbonara\",\n  \"description\": \"Classic Italian pasta with creamy sauce made with eggs, bacon, and Parmesan cheese\",\n  \"ingredients\": [\n    {\n      \"item\": \"Spaghetti\",\n      \"quantity\": 400,\n      \"unit\": \"g\"\n    },\n    {\n      \"item\": \"Eggs\",\n      \"quantity\": 3,\n      \"unit\": \"pieces\"\n    },\n    {\n      \"item\": \"Bacon\",\n      \"quantity\": 200,\n      \"unit\": \"g\"\n    },\n    {\n      \"item\": \"Parmesan Cheese\",\n      \"quantity\": 100,\n      \"unit\": \"g\"\n    },\n    {\n      \"item\": \"Black Pepper\",\n      \"quantity\": 1,\n      \"unit\": \"tsp\"\n    }\n  ],\n  \"instructions\": [\n    {\n      \"step\": 1,\n      \"description\": \"Bring a large pot of salted water to a boil\"\n    },\n    {\n      \"step\": 2,\n      \"description\": \"Add spaghetti and cook until al dente (about 8-10 minutes)\"\n    },\n    {\n      \"step\": 3,\n      \"description\": \"Cut bacon into small pieces and fry in a pan until crispy\"\n    },\n    {\n      \"step\": 4,\n      \"description\": \"In a bowl, beat eggs with grated Parmesan cheese and black pepper\"\n    },\n    {\n      \"step\": 5,\n      \"description\": \"Drain pasta, reserving 1 cup of pasta water\"\n    },\n    {\n      \"step\": 6,\n      \"description\": \"Add hot pasta to bacon and mix well\"\n    },\n    {\n      \"step\": 7,\n      \"description\": \"Remove from heat and quickly add egg mixture, tossing constantly\"\n    },\n    {\n      \"step\": 8,\n      \"description\": \"Add pasta water if needed to achieve creamy consistency\"\n    }\n  ],\n  \"prepTime\": 10,\n  \"cookTime\": 20,\n  \"servings\": 4,\n  \"difficulty\": \"Easy\",\n  \"cuisine\": \"Italian\",\n  \"tags\": [\"pasta\", \"quick\", \"easy\", \"classic\", \"italian\"],\n  \"rating\": 5\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/recipes",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "recipes"]
+        },
+        "description": "Create a new recipe with complete details including ingredients and step-by-step instructions."
+      },
+      "response": []
+    },
+    {
+      "name": "Create Recipe - Margherita Pizza",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Margherita Pizza\",\n  \"description\": \"Traditional Italian pizza with fresh mozzarella, basil, and tomato sauce\",\n  \"ingredients\": [\n    {\n      \"item\": \"Pizza Dough\",\n      \"quantity\": 500,\n      \"unit\": \"g\"\n    },\n    {\n      \"item\": \"Tomato Sauce\",\n      \"quantity\": 200,\n      \"unit\": \"ml\"\n    },\n    {\n      \"item\": \"Fresh Mozzarella\",\n      \"quantity\": 250,\n      \"unit\": \"g\"\n    },\n    {\n      \"item\": \"Fresh Basil\",\n      \"quantity\": 10,\n      \"unit\": \"pieces\"\n    },\n    {\n      \"item\": \"Olive Oil\",\n      \"quantity\": 2,\n      \"unit\": \"tbsp\"\n    },\n    {\n      \"item\": \"Salt\",\n      \"quantity\": 0.5,\n      \"unit\": \"tsp\"\n    }\n  ],\n  \"instructions\": [\n    {\n      \"step\": 1,\n      \"description\": \"Preheat oven to 250°C (475°F)\"\n    },\n    {\n      \"step\": 2,\n      \"description\": \"Roll out pizza dough on a baking stone or sheet\"\n    },\n    {\n      \"step\": 3,\n      \"description\": \"Spread tomato sauce evenly over the dough\"\n    },\n    {\n      \"step\": 4,\n      \"description\": \"Tear fresh mozzarella and distribute over sauce\"\n    },\n    {\n      \"step\": 5,\n      \"description\": \"Drizzle with olive oil and season with salt\"\n    },\n    {\n      \"step\": 6,\n      \"description\": \"Bake for 12-15 minutes until crust is golden\"\n    },\n    {\n      \"step\": 7,\n      \"description\": \"Add fresh basil immediately after removing from oven\"\n    }\n  ],\n  \"prepTime\": 15,\n  \"cookTime\": 15,\n  \"servings\": 2,\n  \"difficulty\": \"Easy\",\n  \"cuisine\": \"Italian\",\n  \"tags\": [\"pizza\", \"vegetarian\", \"italian\", \"classic\"],\n  \"rating\": 4.8\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/recipes",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "recipes"]
+        },
+        "description": "Create another sample recipe - Margherita Pizza"
+      },
+      "response": []
+    },
+    {
+      "name": "Create Recipe - Chicken Tikka Masala",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Chicken Tikka Masala\",\n  \"description\": \"Creamy and aromatic Indian curry with tender chicken pieces and tomato-cream sauce\",\n  \"ingredients\": [\n    {\n      \"item\": \"Chicken Breast\",\n      \"quantity\": 600,\n      \"unit\": \"g\"\n    },\n    {\n      \"item\": \"Yogurt\",\n      \"quantity\": 200,\n      \"unit\": \"ml\"\n    },\n    {\n      \"item\": \"Tomato Sauce\",\n      \"quantity\": 400,\n      \"unit\": \"ml\"\n    },\n    {\n      \"item\": \"Heavy Cream\",\n      \"quantity\": 200,\n      \"unit\": \"ml\"\n    },\n    {\n      \"item\": \"Ginger Garlic Paste\",\n      \"quantity\": 2,\n      \"unit\": \"tbsp\"\n    },\n    {\n      \"item\": \"Garam Masala\",\n      \"quantity\": 1,\n      \"unit\": \"tbsp\"\n    },\n    {\n      \"item\": \"Turmeric\",\n      \"quantity\": 0.5,\n      \"unit\": \"tsp\"\n    },\n    {\n      \"item\": \"Chili Powder\",\n      \"quantity\": 1,\n      \"unit\": \"tsp\"\n    },\n    {\n      \"item\": \"Onions\",\n      \"quantity\": 2,\n      \"unit\": \"pieces\"\n    }\n  ],\n  \"instructions\": [\n    {\n      \"step\": 1,\n      \"description\": \"Marinate chicken in yogurt, ginger-garlic paste, and spices for 30 minutes\"\n    },\n    {\n      \"step\": 2,\n      \"description\": \"Grill or pan-fry chicken pieces until cooked through\"\n    },\n    {\n      \"step\": 3,\n      \"description\": \"Slice onions thinly and sauté in oil until golden brown\"\n    },\n    {\n      \"step\": 4,\n      \"description\": \"Add ginger-garlic paste and cook for 1 minute\"\n    },\n    {\n      \"step\": 5,\n      \"description\": \"Add garam masala, turmeric, and chili powder; stir well\"\n    },\n    {\n      \"step\": 6,\n      \"description\": \"Add tomato sauce and simmer for 10 minutes\"\n    },\n    {\n      \"step\": 7,\n      \"description\": \"Stir in heavy cream and cooked chicken pieces\"\n    },\n    {\n      \"step\": 8,\n      \"description\": \"Simmer for 5 minutes until flavors blend well\"\n    },\n    {\n      \"step\": 9,\n      \"description\": \"Serve hot with rice or naan bread\"\n    }\n  ],\n  \"prepTime\": 40,\n  \"cookTime\": 35,\n  \"servings\": 4,\n  \"difficulty\": \"Medium\",\n  \"cuisine\": \"Indian\",\n  \"tags\": [\"curry\", \"chicken\", \"indian\", \"aromatic\", \"creamy\"],\n  \"rating\": 4.9\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/recipes",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "recipes"]
+        },
+        "description": "Create sample recipe - Chicken Tikka Masala"
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Recipes",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/recipes?page=1&limit=10",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "recipes"],
+          "query": [
+            {
+              "key": "page",
+              "value": "1",
+              "description": "Page number for pagination (default: 1)"
+            },
+            {
+              "key": "limit",
+              "value": "10",
+              "description": "Number of recipes per page (default: 10)"
+            }
+          ]
+        },
+        "description": "Retrieve all recipes with pagination support. Query parameters are optional."
+      },
+      "response": []
+    },
+    {
+      "name": "Get Recipe by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/recipes/64f7c8a3e4b0a1b2c3d4e5f6",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "recipes", "64f7c8a3e4b0a1b2c3d4e5f6"]
+        },
+        "description": "Retrieve a single recipe by its MongoDB ObjectId. Replace the ID in the URL with an actual recipe ID from the database."
+      },
+      "response": []
+    },
+    {
+      "name": "Update Recipe",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"rating\": 4.5,\n  \"difficulty\": \"Medium\",\n  \"servings\": 6,\n  \"tags\": [\"pasta\", \"quick\", \"easy\", \"classic\", \"italian\", \"family-favorite\"]\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/recipes/64f7c8a3e4b0a1b2c3d4e5f6",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "recipes", "64f7c8a3e4b0a1b2c3d4e5f6"]
+        },
+        "description": "Update one or more fields of an existing recipe. You can send only the fields you want to update. Replace the ID with an actual recipe ID."
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Recipe",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/recipes/64f7c8a3e4b0a1b2c3d4e5f6",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "recipes", "64f7c8a3e4b0a1b2c3d4e5f6"]
+        },
+        "description": "Delete a recipe by its MongoDB ObjectId. This action cannot be undone. Replace the ID with an actual recipe ID."
+      },
+      "response": []
+    },
+    {
+      "name": "Search Recipes by Cuisine",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/recipes/search?cuisine=Italian",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "recipes", "search"],
+          "query": [
+            {
+              "key": "cuisine",
+              "value": "Italian",
+              "description": "Filter recipes by cuisine type (case-insensitive)"
+            }
+          ]
+        },
+        "description": "Search for recipes filtered by cuisine type. Try different cuisines like Italian, Indian, etc."
+      },
+      "response": []
+    },
+    {
+      "name": "Search Recipes by Tags",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/recipes/search?tags=quick",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "recipes", "search"],
+          "query": [
+            {
+              "key": "tags",
+              "value": "quick",
+              "description": "Filter recipes by tag"
+            }
+          ]
+        },
+        "description": "Search for recipes filtered by tags. Try different tags like quick, vegetarian, easy, etc."
+      },
+      "response": []
+    },
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": []
+        },
+        "description": "Check server health and get API information with all available endpoints."
+      },
+      "response": []
+    }
+  ]
+}
